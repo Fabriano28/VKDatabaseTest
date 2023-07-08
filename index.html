@@ -123,17 +123,8 @@
       <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
       <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
 
-      <script type="module">
-          // Import the functions you need from the SDKs you need
-          import firebase from "firebase/compat/app";
-          // Required for side-effects
-          import "firebase/firestore";
-          // TODO: Add SDKs for Firebase products that you want to use
-          // https://firebase.google.com/docs/web/setup#available-libraries
-
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-          const firebaseConfig = {
+      <script>
+          const firebaseApp = firebase.initializeApp({
               apiKey: "AIzaSyBt0cNaYsMiTx_m5rV-R3PnWRj40Sb1Dvg",
               authDomain: "vk-database-test.firebaseapp.com",
               projectId: "vk-database-test",
@@ -141,11 +132,8 @@
               messagingSenderId: "763773418652",
               appId: "1:763773418652:web:bd6d7e29d0e92e43f54159",
               measurementId: "G-Y2KVQB71Y6"
-          };
-
-          // Initialize Firebase
-          const app = initializeApp(firebaseConfig);
-          const db = firebase.firestore();
+          });
+          const db = firebaseApp.firestore();
       </script>
   </body>
 </html>
